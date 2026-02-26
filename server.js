@@ -1,12 +1,6 @@
-const express = require('express');
-const path = require('path');
-const app = express();
+const http = require('http');
 const PORT = process.env.PORT || 3000;
-const HOST = '0.0.0.0';
-app.use(express.static(path.join(__dirname, 'public')));
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-app.listen(PORT, HOST, () => {
-  console.log('Scholastic Chess HK running on ' + HOST + ':' + PORT);
-});
+http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.end('<h1>Railway Test - It Works!</h1>');
+}).listen(PORT, '0.0.0.0', () => console.log('Test server on port ' + PORT));
