@@ -1,0 +1,12 @@
+{
+  "name": "scholastic-chess-hk",
+  "version": "1.0.0",
+  "description": "Scholastic Chess Hong Kong - Programme Presentation",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
