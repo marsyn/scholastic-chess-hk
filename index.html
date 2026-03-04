@@ -548,14 +548,16 @@ p {
   text-align: left;
   border-bottom: 2px solid var(--border);
 }
-.comparison-table th:first-child { color: var(--ink-muted); }
+.comparison-table th:first-child { color: var(--ink); }
+.comparison-table th:nth-child(2) { color: var(--ink-muted); }
 .comparison-table th:last-child { color: var(--brand); }
 .comparison-table td {
   padding: 11px 16px;
   border-bottom: 1px solid var(--border-light);
   vertical-align: top;
 }
-.comparison-table tr td:first-child { color: var(--ink-faint); }
+.comparison-table tr td:first-child { color: var(--ink); font-weight: 600; font-size: 0.85em; }
+.comparison-table tr td:nth-child(2) { color: var(--ink-faint); }
 .comparison-table tr td:last-child { color: var(--ink); font-weight: 500; }
 
 /* ===== DIGITAL TOOLS ===== */
@@ -1229,22 +1231,26 @@ p {
       <li>Confidence to compete in real tournaments — locally and internationally</li>
     </ul>
 
-    <h3 class="fade-in" style="margin-top:24px;">How We Compare</h3>
+    <h3 class="fade-in" style="margin-top:24px;">Our Programme vs Others</h3>
     <div style="overflow-x:auto;" class="fade-in">
       <table class="comparison-table">
         <thead>
           <tr>
+            <th>Aspect</th>
             <th>Other Programmes</th>
             <th>Scholastic Chess HK</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>Often rating-focused with less emphasis on the learning process</td><td>Effort-based, no-stress progression system</td></tr>
-          <tr><td>Generic curriculum for all ages</td><td>Research-backed curriculum by a PhD in chess education</td></tr>
-          <tr><td>Large classes, minimal individual attention</td><td>Small groups (max 4–6), personalised coaching</td></tr>
-          <tr><td>Results-only focus</td><td>We value effort, curiosity, and growth over winning</td></tr>
-          <tr><td>No clear structure or promotion criteria</td><td>Transparent level system with formal checklists</td></tr>
-          <tr><td>Limited structured homework or independent study guidance</td><td>Weekly homework, online platform goals, merit points</td></tr>
+          <tr><td>Curriculum</td><td>Generic or no formal curriculum</td><td>Research-backed, written by a PhD in chess education</td></tr>
+          <tr><td>Class Size</td><td>Large groups (8–15+)</td><td>Small groups (max 4–6 students)</td></tr>
+          <tr><td>Lesson Format</td><td>Unstructured or play-only</td><td>Proven 60-min format: theory + puzzles + guided play</td></tr>
+          <tr><td>Progression</td><td>No clear levels or criteria</td><td>4 levels with formal promotion checklists</td></tr>
+          <tr><td>Homework</td><td>Rarely provided</td><td>Printed sheets every lesson, reviewed in class</td></tr>
+          <tr><td>Online Practice</td><td>Not monitored</td><td>Coach-monitored ChessKid / Chess.com goals</td></tr>
+          <tr><td>Philosophy</td><td>Rating- or results-focused</td><td>Effort-first: curiosity, growth, confidence</td></tr>
+          <tr><td>Tournament Path</td><td>Ad hoc or external only</td><td>Monthly club events to FIDE-rated competitions</td></tr>
+          <tr><td>Parent Updates</td><td>Minimal communication</td><td>Direct coach access, transparent curriculum, reports</td></tr>
         </tbody>
       </table>
     </div>
