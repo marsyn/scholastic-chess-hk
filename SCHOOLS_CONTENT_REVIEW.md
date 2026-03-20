@@ -34,13 +34,13 @@ Schools that add chess to their programme report stronger focus in class, improv
 
 **Current Pillars:**
 
-- **Cognitive Development** — Improves focus, logical reasoning, and working memory — backed by educational research.
-- **Character Building** — Develops patience, sportsmanship, and the ability to lose gracefully and try again.
+- **Cognitive Development** — Improves focus, logical reasoning, and working memory — backed by educational research.  
+- **Character Building** — Develops patience, sportsmanship, and the ability to lose gracefully and try again.  
 - **Measurable Progress** — Students advance through clear levels with defined outcomes — visible to teachers and parents.
 
 **Your Edits:**
 
-*Write any changes here…*
+*Write any changes here…*Chess is uniquely positioned at the intersection of academics and character education. In a single lesson, students practise logical reasoning, pattern recognition, decision-making under pressure, emotional self-regulation, and graceful sportsmanship — all without a screen, a score, or a ranking to worry about. \- i like the idea but then we say about tournaments and merit system which are measurable metrics that is the score and rankings. So we need to consider this idea and slightly adjust the text.
 
 ---
 
@@ -50,7 +50,7 @@ Schools that add chess to their programme report stronger focus in class, improv
 
 **Current Text (Paragraph 1):**
 
-Scholastic Chess Hong Kong has been delivering professional chess education since 2012. We are not a chess club that also teaches — we are educators who specialise in chess, currently working with 250+ students across more than 20 schools and our own academy in Hong Kong.
+Scholastic Chess Hong Kong has been delivering professional chess education since 2012\. We are not a chess club that also teaches — we are educators who specialise in chess, currently working with 250+ students across more than 20 schools and our own academy in Hong Kong.
 
 **Current Text (Paragraph 2):**
 
@@ -58,9 +58,9 @@ Our programme is built around a professionally designed curriculum authored by o
 
 **Current Stats:**
 
-- **2012** — Over a decade of chess education in Hong Kong
-- **20+** — Schools across Hong Kong currently running our programme
-- **250+** — Students enrolled across schools and our academy
+- **2012** — Over a decade of chess education in Hong Kong  
+- **20+** — Schools across Hong Kong currently running our programme  
+- **250+** — Students enrolled across schools and our academy  
 - **60 min** — Structured, purposeful lessons — every minute counts
 
 **Your Edits:**
@@ -83,11 +83,11 @@ We focus the school programme on the first two core levels of our curriculum: **
 
 **Current Feature List:**
 
-- Classes of 5–20 students — designed for school environments
-- 1-hour lessons, adapted to your school's schedule
-- Beginner-friendly — no prior chess knowledge required
-- Coaches handle all equipment, materials, and classroom setup
-- Seamlessly integrates as an ECA or structured class period
+- Classes of 5–20 students — designed for school environments  
+- 1-hour lessons, adapted to your school's schedule  
+- Beginner-friendly — no prior chess knowledge required  
+- Coaches handle all equipment, materials, and classroom setup  
+- Seamlessly integrates as an ECA or structured class period  
 - We identify talented students and can recommend advanced pathways
 
 **Your Edits:**
@@ -108,14 +108,14 @@ Our school programme follows a structured, level-based curriculum. Each level ha
 
 Students learn the history of chess, piece movement, rules of the game (check, checkmate, stalemate, castling, en passant), and basic notation. The Bootcamp uses age-appropriate methods designed for children as young as 4–6.
 
-- Estimated time: 1 semester
+- Estimated time: 1 semester  
 - ChessKid rating: 0–700
 
 **Your Edits:**
 
 *Write any changes here…*
 
-### First Mover (Level 1)
+### First Mover (Level 1\)
 
 **Tagline:** From knowing the basics to playing full, confident games
 
@@ -123,14 +123,14 @@ Students master all chess rules, basic checkmates, the three golden rules of the
 
 Core topics: checkmate patterns, material advantage, phases of the game, classic miniature games, introduction to tactics and combinations.
 
-- Estimated time: 2–4 semesters
+- Estimated time: 2–4 semesters  
 - ChessKid rating: 700–1100
 
 **Your Edits:**
 
 *Write any changes here…*
 
-### Tactician (Level 2)
+### Tactician (Level 2\)
 
 **Tagline:** From casual player to strong tactical attacker
 
@@ -138,7 +138,7 @@ Students dive into 25 key tactical patterns, attacking chess principles, and the
 
 Core topics: 25 tactical ideas, opening disasters, attacking principles I & II, introduction to positional play, aspects of chess strategy and planning.
 
-- Estimated time: 4–8 semesters
+- Estimated time: 4–8 semesters  
 - ChessKid rating: 1000–1400
 
 **Your Edits:**
@@ -155,14 +155,14 @@ Core topics: 25 tactical ideas, opening disasters, attacking principles I & II, 
 
 Our lessons follow a six-stage format designed by our Head Coach. It ensures every class is purposeful, engaging, and consistent — regardless of the coach or the school. Every minute has a role.
 
-| # | Time | Block | Current Description |
-| :- | :---- | :---- | :---- |
+| \# | Time | Block | Current Description |
+| :---- | :---- | :---- | :---- |
 | 1 | 2–5 min | Smooth Start | Attendance, brief check-in, lesson topic introduced. Sets expectations and classroom tone from the first minute. |
 | 2 | 2–5 min | Chess Success Story | Students share highlights from their week on ChessKid — a game they're proud of, a puzzle they solved, a win or a lesson learned. Builds reflection and confidence. |
-| 3 | 10–15 min | Theory Block | One tactical idea + one classical game analysed. Focused, structured, age-appropriate. The core teaching moment. |
+| 3 | 10–15 min | Theory Block | One tactical idea \+ one classical game analysed. Focused, structured, age-appropriate. The core teaching moment. |
 | 4 | 5–10 min | ChessKid Mission | Coach reviews the weekly ChessKid task. Students are briefed on their independent work for the week — connecting in-class learning to home practice. |
 | 5 | 25–30 min | Practice — Tournament | Students play tournament games against each other. The coach supervises and acts as arbiter. This is the heart of the lesson: theory becomes practice. |
-| 6 | ~5 min | Closing | Lesson ends on a positive note. Merit Points acknowledged. School dismissal procedure followed. |
+| 6 | \~5 min | Closing | Lesson ends on a positive note. Merit Points acknowledged. School dismissal procedure followed. |
 
 **Current Callout Quote:** "This is not free play — every minute is purposeful. We call it Learning Through Play."
 
@@ -222,15 +222,19 @@ Every student receives a premium ChessKid account — the world's leading child-
 
 **Your Edits:**
 
-*Write any changes here…*
+*Write any changes here… Note: ChessKid is used for Beginner Bootcamp through Tactician levels. Chess.com is introduced at Strategist level and above. \- remove this note*
 
 ### Homework
 
 After each lesson, students take home a printed puzzle sheet directly tied to the topic taught in class. Homework is reviewed at the start of the following session. Sources include the Steps Method, Ivashchenko puzzle collections, and our Head Coach's proprietary database.
 
-**Your Edits:**
+**Your Edits:** 
 
-*Write any changes here…*
+*Write any changes here…* **we don't give printed out homeworks in schools. Remove it. Instead we can add something like access to the Scholastic Chess events**   
+**We host our monthly tournaments for players of any level and age at our venue with a special discount for our schools students (around 30% of standart fee).**  
+**We host monthly Workshops & Masterclasses**   
+**We do special events with famous Grandmasters and chess influencers.**   
+**And ill do the order: ChessKid, Merit Points and only then this about events access.**
 
 ### Merit Points System
 
@@ -240,7 +244,7 @@ Students earn Merit Points for weekly activities. The system promotes healthy st
 
 **Your Edits:**
 
-*Write any changes here…*
+*Write any changes here…t*op performers are recognised at the end of each term with special Merit Medals.
 
 ---
 
@@ -258,8 +262,8 @@ This regular competitive practice nurtures three qualities we consider essential
 
 **Current Pillars:**
 
-- **Resilience** — Learning to recover from setbacks and play on — a skill that transfers directly into academic and social life.
-- **Sportsmanship** — Winning and losing with grace and respect. Students practise etiquette in every game.
+- **Resilience** — Learning to recover from setbacks and play on — a skill that transfers directly into academic and social life.  
+- **Sportsmanship** — Winning and losing with grace and respect. Students practise etiquette in every game.  
 - **Confidence** — Trusting their own decisions under pressure — a habit of mind built move by move across the term.
 
 **Current Callout:**
@@ -284,9 +288,9 @@ The Scholastic Chess team is currently working with 250+ students from schools a
 
 **Current Credentials:**
 
-- FIDE School Instructor & National Arbiter
-- Chess Promoter & Tournament Director
-- 10+ years of teaching experience
+- FIDE School Instructor & National Arbiter  
+- Chess Promoter & Tournament Director  
+- 10+ years of teaching experience  
 - Club strategy, quality assurance & school partnerships
 
 **Your Edits:**
@@ -297,10 +301,10 @@ The Scholastic Chess team is currently working with 250+ students from schools a
 
 **Current Credentials:**
 
-- PhD in Education — chess pedagogy
-- FIDE Master in Chess
-- 10+ years of professional coaching experience
-- Author of the Scholastic Chess curriculum
+- PhD in Education — chess pedagogy  
+- FIDE Master in Chess  
+- 10+ years of professional coaching experience  
+- Author of the Scholastic Chess curriculum  
 - Popular chess educator on YouTube
 
 **Your Edits:**
@@ -327,24 +331,24 @@ Partnering with Scholastic Chess is designed to be as simple as possible for you
 
 **What Scholastic Chess provides:**
 
-- Qualified, trained coaches with a consistent lesson plan
-- All chess equipment — boards, pieces, clocks
-- Printed homework materials every session
-- ChessKid premium subscriptions for every student
-- Merit Points tracking and end-of-term recognition
-- Coach Handbook and ongoing coach professional development
-- Head Coach oversight and quality assurance
+- Qualified, trained coaches with a consistent lesson plan  
+- All chess equipment — boards, pieces, clocks  
+- Printed homework materials every session  
+- ChessKid premium subscriptions for every student  
+- Merit Points tracking and end-of-term recognition  
+- Coach Handbook and ongoing coach professional development  
+- Head Coach oversight and quality assurance  
 - Regular progress updates available for school administrators
 
-**Your Edits:**
+**Your Edits:** Printed homework materials every session \- remove it from the list
 
 *Write any changes here…*
 
 **What we ask from the school:**
 
-- A classroom or suitable space for the lesson duration
-- A scheduled time slot — ECA period or lesson time
-- Basic school communication to enrolled students and parents
+- A classroom or suitable space for the lesson duration  
+- A scheduled time slot — ECA period or lesson time  
+- Basic school communication to enrolled students and parents  
 - Support for the school's standard dismissal and behaviour procedures
 
 **Your Edits:**
@@ -363,17 +367,19 @@ We're happy to share more — come and observe a lesson, meet our coaches, or si
 
 **Current Next Steps:**
 
-- **Observe a Lesson** — Visit one of our existing school or academy sessions to see the programme in action. No preparation needed on your part.
-- **Schedule a Conversation** — Talk with our Principal, Oliver Conran, about your school's context and how the programme could fit.
+- **Observe a Lesson** — Visit one of our existing school or academy sessions to see the programme in action. No preparation needed on your part.  
+- **Schedule a Conversation** — Talk with our Principal, Oliver Conran, about your school's context and how the programme could fit.  
 - **Request the Full Curriculum** — We're happy to share the complete curriculum — including lesson plans, level breakdowns, and the Coach Handbook overview.
 
-**CTA Button:** Get in Touch on WhatsApp (+852 6629 5092)
+**CTA Button:** Get in Touch on WhatsApp (+852 6629 5092\)
 
 **Footer:** Scholastic Chess Hong Kong — Where Every Move Counts
 
 **Your Edits:**
 
-*Write any changes here…*
+*Write any changes here…*  
+we need to remove the invitation to attend a lesson in another school towards the end. May be instead of Observe Lesson we can have something like "Learn More" with something like visit our social medias or something else.  
+•requesting Full Curriculum is fine, but not the Coaches Handbook as its our internal document.
 
 ---
 
@@ -381,8 +387,10 @@ We're happy to share more — come and observe a lesson, meet our coaches, or si
 
 *Any overall feedback, things to add, or things to remove across the whole page?*
 
-*Write here…*
+*Write here…*   
+*We can have a scrolling testimonials section at the bottom. I'm sure i could get schools to help and give testimonials.*  
+*All across the document change the name of our organisation from Scholastic Chess Hong Kong to Scholastic Chess (as its official company name).*
 
 ---
 
-**Thank you for reviewing! Please return this document with your edits.**
+**Thank you for reviewing\! Please return this document with your edits.**  
