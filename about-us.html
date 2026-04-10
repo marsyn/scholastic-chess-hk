@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Scholastic Chess Hong Kong</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  color: #1C2127;
+  background: #FAFAF7;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== TOKENS ===== */
+:root {
+  --orange: #E96E20;
+  --orange-dark: #C85A16;
+  --orange-light: #F5882E;
+  --bg-light: #FAFAF7;
+  --bg-warm: #FDF8F3;
+  --bg-card: #FFFFFF;
+  --ink-dark: #1C2127;
+  --ink-faint: #9CA3AF;
+  --dark1: #111318;
+  --dark2: #1A1D24;
+  --dark3: #24282F;
+  --serif: 'Source Serif 4', Georgia, serif;
+  --sans: 'Nunito Sans', system-ui, sans-serif;
+  --max-w: 860px;
+}
+
+/* ===== PROGRESS BAR ===== */
+.progress-bar {
+  position: fixed; top: 0; left: 0; height: 3px;
+  background: var(--orange); z-index: 100;
+  width: 0%; transition: width 0.3s ease;
+}
+
+/* ===== SLIDE BASE ===== */
+.slide {
+  min-height: 100dvh; width: 100%;
+  scroll-snap-align: start;
+  display: flex; align-items: center; justify-content: center;
+  padding: 60px 40px;
+  position: relative;
+  border-left: 4px solid var(--orange);
+  overflow: hidden;
+}
+.slide-inner {
+  max-width: var(--max-w);
+  width: 100%;
+}
+
+/* ===== THEMES ===== */
+.slide--dark { background: var(--dark1); color: #fff; }
+.slide--dark .section-label { color: var(--orange); }
+.slide--dark .ink-faint { color: #9CA3AF; }
+
+.slide--light { background: var(--bg-light); color: var(--ink-dark); }
+.slide--warm { background: var(--bg-warm); color: var(--ink-dark); }
+
+/* ===== TYPOGRAPHY ===== */
+.section-label {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--orange);
+  margin-bottom: 12px;
+}
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+.subtitle {
+  font-family: var(--sans);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--ink-faint);
+  margin-bottom: 24px;
+  font-style: italic;
+}
+.slide--dark .subtitle { color: #9CA3AF; }
+p, .body-text {
+  font-family: var(--sans);
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.closing {
+  font-style: italic;
+  color: var(--ink-faint);
+  margin-top: 24px;
+  font-size: 0.95rem;
+}
+.slide--dark .closing { color: #9CA3AF; }
+
+/* ===== STAT STRIP ===== */
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 32px 0;
+}
+.stat-strip--3 { grid-template-columns: repeat(3, 1fr); }
+.stat-box {
+  text-align: center;
+  padding: 20px 12px;
+  border-radius: 12px;
+}
+.slide--dark .stat-box { background: var(--dark2); }
+.slide--light .stat-box, .slide--warm .stat-box { background: var(--bg-card); box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+.stat-value {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--orange);
+  display: block;
+  margin-bottom: 4px;
+}
+.stat-label {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-faint);
+}
+.slide--dark .stat-label { color: #9CA3AF; }
+
+/* ===== CTA BUTTON ===== */
+.cta-btn {
+  display: inline-block;
+  background: var(--orange);
+  color: #fff;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 8px;
+}
+.cta-btn:hover { background: var(--orange-dark); transform: translateY(-1px); }
+
+.cta-link {
+  color: var(--orange);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+.cta-link:hover { border-bottom-color: var(--orange); }
+
+/* ===== TEAM CARDS ===== */
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 28px 0;
+}
+.team-card {
+  border-radius: 12px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.slide--light .team-card { background: var(--bg-card); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.slide--dark .team-card { background: var(--dark2); }
+.team-card__photo {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--orange);
+}
+.team-card__photo-placeholder {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: var(--orange);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+.team-card__role {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--orange);
+}
+.team-card__name {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.team-card__bio {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--ink-faint);
+}
+.slide--dark .team-card__bio { color: #9CA3AF; }
+
+/* ===== POINT CARDS (with orange left bar) ===== */
+.points-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 28px 0;
+}
+.point-card {
+  padding: 20px 20px 20px 24px;
+  border-left: 4px solid var(--orange);
+  border-radius: 0 10px 10px 0;
+}
+.slide--dark .point-card { background: var(--dark2); }
+.slide--light .point-card, .slide--warm .point-card { background: var(--bg-card); box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+.point-card__title {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+.point-card__desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--ink-faint);
+}
+.slide--dark .point-card__desc { color: #9CA3AF; }
+
+/* ===== BENEFITS LIST ===== */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin: 28px 0;
+}
+.benefit-item {
+  text-align: center;
+  padding: 20px 12px;
+  border-radius: 12px;
+}
+.slide--light .benefit-item { background: var(--bg-card); box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+.benefit-icon {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  display: block;
+}
+.benefit-text {
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* ===== QUOTE BLOCK ===== */
+.quote-block {
+  border-left: 4px solid var(--orange);
+  padding: 20px 24px;
+  margin: 24px 0;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  border-radius: 0 8px 8px 0;
+}
+.slide--light .quote-block { background: var(--bg-warm); }
+.slide--dark .quote-block { background: var(--dark2); }
+
+/* ===== COACHING BLOCK ===== */
+.coaching-block {
+  padding: 24px;
+  border-radius: 12px;
+  margin-top: 16px;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+.slide--light .coaching-block { background: var(--bg-warm); }
+
+/* ===== CONTACT GRID ===== */
+.contact-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 32px 0;
+}
+.contact-card {
+  padding: 24px 20px;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.contact-card:hover { transform: translateY(-2px); }
+.slide--dark .contact-card { background: var(--dark2); color: #fff; }
+.contact-card__icon { font-size: 1.5rem; margin-bottom: 10px; display: block; }
+.contact-card__title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+.contact-card__desc {
+  font-size: 0.82rem;
+  color: #9CA3AF;
+}
+
+.contact-details {
+  text-align: center;
+  margin-top: 28px;
+  font-size: 0.9rem;
+  color: #9CA3AF;
+  line-height: 1.8;
+}
+.contact-details strong { color: #fff; }
+
+/* ===== LOGO ===== */
+.logo { height: 60px; margin-bottom: 24px; }
+.logo--large { height: 80px; }
+
+/* ===== FOOTER ===== */
+.slide-footer {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 0.78rem;
+  color: #9CA3AF;
+  letter-spacing: 0.03em;
+}
+
+/* ===== LOCATION LINE ===== */
+.location-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--ink-faint);
+  margin-top: 8px;
+}
+
+/* ===== FADE-IN ANIMATION ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .slide { padding: 48px 28px; }
+  .stat-strip { grid-template-columns: repeat(2, 1fr); }
+  .stat-strip--3 { grid-template-columns: repeat(3, 1fr); }
+  .team-grid { grid-template-columns: 1fr; }
+  .points-grid { grid-template-columns: 1fr; }
+  .benefits-grid { grid-template-columns: repeat(3, 1fr); }
+  .contact-options { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .slide { padding: 40px 20px; }
+  .stat-strip, .stat-strip--3 { grid-template-columns: 1fr 1fr; }
+  .benefits-grid { grid-template-columns: 1fr 1fr; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.35rem; }
+}
+@media (max-height: 650px) {
+  .slide { padding: 32px 28px; }
+  .stat-strip { margin: 16px 0; }
+  .points-grid { margin: 16px 0; gap: 10px; }
+}
+
+/* ===== PRINT ===== */
+@media print {
+  @page { size: 297mm 167mm landscape; margin: 0; }
+  html { scroll-snap-type: none; }
+  .slide {
+    min-height: auto; height: 167mm;
+    page-break-after: always;
+    break-after: page;
+  }
+  .progress-bar { display: none; }
+  .fade-in { opacity: 1 !important; transform: none !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ============================================================ -->
+<!-- SLIDE 1 — HERO + KEY FACTS                                   -->
+<!-- ============================================================ -->
+<section class="slide slide--dark" id="slide-1">
+  <div class="slide-inner">
+    <!-- Logo placeholder — replace src with base64 when available -->
+    <div style="margin-bottom: 20px;">
+      <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.9">
+        <rect width="60" height="60" rx="12" fill="#E96E20"/>
+        <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-family="Source Serif 4, serif" font-size="22" font-weight="700">SC</text>
+      </svg>
+    </div>
+    <div class="section-label fade-in">About Us</div>
+    <h1 class="fade-in">Scholastic Chess Hong Kong</h1>
+    <p class="subtitle fade-in">One of Hong Kong's Leading Chess Education Providers</p>
+    <p class="body-text fade-in" style="max-width:640px;">
+      Founded in 2012, Scholastic Chess delivers structured, professional chess education to 250+ students across 20+ schools and our own Central academy.
+    </p>
+
+    <div class="stat-strip fade-in">
+      <div class="stat-box">
+        <span class="stat-value">2012</span>
+        <span class="stat-label">Founded</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-value">250+</span>
+        <span class="stat-label">Active Students</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-value">20+</span>
+        <span class="stat-label">Partner Schools</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-value">Central</span>
+        <span class="stat-label">Academy Location</span>
+      </div>
+    </div>
+
+    <a href="https://wa.me/85266295092" class="cta-btn fade-in" target="_blank" rel="noopener">Get in Touch</a>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 2 — OUR STORY                                          -->
+<!-- ============================================================ -->
+<section class="slide slide--warm" id="slide-2">
+  <div class="slide-inner">
+    <div class="section-label fade-in">Our Story</div>
+    <h2 class="fade-in">Built on a Clear Vision</h2>
+    <p class="body-text fade-in">
+      Founded in 2012, Scholastic Chess was built with a single goal — to bring structured, high-quality chess education into Hong Kong schools and make it accessible to every child.
+    </p>
+    <p class="body-text fade-in">
+      Today, we combine academic methodology, professional coaching, and modern digital tools to create one of the most effective chess learning systems in Hong Kong.
+    </p>
+    <p class="body-text fade-in">
+      From our Central academy to classrooms across Hong Kong Island and Kowloon, we serve players from their very first move to FIDE-rated tournament competition.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 3 — LEADERSHIP & COACHING TEAM                         -->
+<!-- ============================================================ -->
+<section class="slide slide--light" id="slide-3">
+  <div class="slide-inner">
+    <div class="section-label fade-in">Our Team</div>
+    <h2 class="fade-in">Professional Leadership. Dedicated Coaches.</h2>
+
+    <div class="team-grid fade-in">
+      <div class="team-card">
+        <img src="https://static.wixstatic.com/media/4205fe_d93969a3e4c04c45bb44773025df70d4~mv2.png/v1/fill/w_324,h_330,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-09-24%20at%2011_edited.png" alt="Oliver Conran, Principal" class="team-card__photo">
+        <div class="team-card__role">Principal</div>
+        <div class="team-card__name">Oliver Conran</div>
+        <div class="team-card__bio">
+          FIDE School Instructor &amp; National Arbiter. Chess Promoter &amp; Tournament Director. 10+ years of teaching experience.
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="https://static.wixstatic.com/media/4205fe_dd51879ff2d44eef817ea607cb34cf6b~mv2.jpg/v1/crop/x_0,y_291,w_1454,h_1548/fill/w_324,h_330,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_9978%20(1)_edited_edited.jpg" alt="Dr. Pavel Martynov, Head Coach" class="team-card__photo">
+        <div class="team-card__role">Head Coach &amp; Curriculum Author</div>
+        <div class="team-card__name">Dr. Pavel Martynov</div>
+        <div class="team-card__bio">
+          PhD in Education (chess pedagogy). FIDE Master. 10+ years of professional coaching. Popular chess educator on YouTube.
+        </div>
+      </div>
+    </div>
+
+    <div class="coaching-block fade-in">
+      Our team of dedicated coaches combines strong educational training, competitive chess experience, and a genuine passion for teaching. All instructors hold recognised chess and educational qualifications, including FIDE School Instructor, FIDE Developmental Instructor, and FIDE National Arbiter certifications.
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 4 — ACADEMY PROGRAMME                                  -->
+<!-- ============================================================ -->
+<section class="slide slide--light" id="slide-4">
+  <div class="slide-inner">
+    <div class="section-label fade-in">Academy Programme</div>
+    <h2 class="fade-in">Structured Training for Every Level</h2>
+    <p class="body-text fade-in">
+      Our Academy Programme in Central offers group training for children of all levels — from absolute beginners to advanced tournament players.
+    </p>
+
+    <div class="points-grid fade-in">
+      <div class="point-card">
+        <div class="point-card__title">Small Groups</div>
+        <div class="point-card__desc">Maximum 4–6 students per class for personalised attention</div>
+      </div>
+      <div class="point-card">
+        <div class="point-card__title">Structured Curriculum</div>
+        <div class="point-card__desc">Clear level system from Beginner Bootcamp to Master</div>
+      </div>
+      <div class="point-card">
+        <div class="point-card__title">Regular Tournaments</div>
+        <div class="point-card__desc">Monthly over-the-board and online competitive events</div>
+      </div>
+      <div class="point-card">
+        <div class="point-card__title">Holistic Development</div>
+        <div class="point-card__desc">Chess skills and cognitive development side by side</div>
+      </div>
+    </div>
+
+    <div class="location-line fade-in">
+      <span>📍</span> Central Academy — 2 minutes from MTR Central Station
+    </div>
+
+    <div style="margin-top: 20px;" class="fade-in">
+      <a href="https://www.scholasticchess.hk/glp" class="cta-link" target="_blank" rel="noopener">Learn more about our Group Programme →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 5 — SCHOOL PROGRAMME                                   -->
+<!-- ============================================================ -->
+<section class="slide slide--dark" id="slide-5">
+  <div class="slide-inner">
+    <div class="section-label fade-in">School Programme</div>
+    <h2 class="fade-in">Bringing Chess Into Hong Kong's Schools</h2>
+    <p class="body-text fade-in" style="color:#ccc;">
+      We partner with schools across Hong Kong to deliver professional chess programmes as part of extracurricular and enrichment activities.
+    </p>
+
+    <div class="points-grid fade-in">
+      <div class="point-card">
+        <div class="point-card__title">Long-Term Partnerships</div>
+        <div class="point-card__desc">Trusted by 20+ schools across Hong Kong Island and Kowloon</div>
+      </div>
+      <div class="point-card">
+        <div class="point-card__title">Turnkey Delivery</div>
+        <div class="point-card__desc">Coaches handle everything — equipment, materials, curriculum</div>
+      </div>
+      <div class="point-card">
+        <div class="point-card__title">Flexible Class Sizes</div>
+        <div class="point-card__desc">Suitable for groups of 5–20 students</div>
+      </div>
+      <div class="point-card">
+        <div class="point-card__title">Structured Progression</div>
+        <div class="point-card__desc">Building lasting chess habits and thinking skills</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 20px;" class="fade-in">
+      <a href="https://www.scholasticchess.hk/schools" class="cta-link" target="_blank" rel="noopener" style="color:var(--orange);">Explore our School Programme →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 6 — INTERSCHOOL CHAMPIONSHIP                           -->
+<!-- ============================================================ -->
+<section class="slide slide--dark" id="slide-6">
+  <div class="slide-inner">
+    <div class="section-label fade-in">Our Flagship Event</div>
+    <h2 class="fade-in">The Interschool &amp; Open Team Chess Championship</h2>
+    <p class="subtitle fade-in">One of Hong Kong's largest scholastic chess events</p>
+
+    <div class="stat-strip stat-strip--3 fade-in">
+      <div class="stat-box">
+        <span class="stat-value">250+</span>
+        <span class="stat-label">Players</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-value">60+</span>
+        <span class="stat-label">Teams</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-value">Annual</span>
+        <span class="stat-label">Since 2012</span>
+      </div>
+    </div>
+
+    <p class="body-text fade-in" style="color:#ccc;">
+      Every year, we bring together schools from across Hong Kong for a day of competitive, team-based chess. The event gives students their first experience of structured tournament play in a supportive, energising environment.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 7 — CURRICULUM & EDUCATIONAL VALUE                     -->
+<!-- ============================================================ -->
+<section class="slide slide--light" id="slide-7">
+  <div class="slide-inner">
+    <div class="section-label fade-in">Our Approach</div>
+    <h2 class="fade-in">Science-Based Chess Curriculum</h2>
+    <p class="body-text fade-in">
+      Our curriculum is designed by education specialists and built on years of teaching experience. It provides a clear pathway from beginner to advanced level — for both academy and school programmes.
+    </p>
+
+    <div class="quote-block fade-in">
+      Our mission is to help students unlock the full spectrum of benefits that chess provides — personal, academic, and social.
+    </div>
+
+    <div class="benefits-grid fade-in">
+      <div class="benefit-item">
+        <span class="benefit-icon">🧠</span>
+        <span class="benefit-text">Critical Thinking</span>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">🎯</span>
+        <span class="benefit-text">Focus &amp; Discipline</span>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">📊</span>
+        <span class="benefit-text">Planning &amp; Decisions</span>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">💡</span>
+        <span class="benefit-text">Creativity</span>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">🤝</span>
+        <span class="benefit-text">Confidence &amp; Resilience</span>
+      </div>
+    </div>
+
+    <p class="closing fade-in">
+      Chess is not just a game — it is a powerful educational tool that develops skills for life.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 8 — CONTACT / CTA                                      -->
+<!-- ============================================================ -->
+<section class="slide slide--dark" id="slide-8">
+  <div class="slide-inner" style="text-align:center;">
+    <div style="margin-bottom: 20px;">
+      <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.9">
+        <rect width="60" height="60" rx="12" fill="#E96E20"/>
+        <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-family="Source Serif 4, serif" font-size="22" font-weight="700">SC</text>
+      </svg>
+    </div>
+    <div class="section-label fade-in">Get in Touch</div>
+    <h2 class="fade-in">Let's Talk</h2>
+    <p class="body-text fade-in" style="color:#ccc; max-width:520px; margin: 0 auto 32px;">
+      Whether you're a school, a potential partner, or simply curious about what we do — we'd love to hear from you.
+    </p>
+
+    <div class="contact-options fade-in">
+      <a href="https://wa.me/85266295092?text=Hi%2C%20I'd%20like%20to%20book%20a%20free%20trial%20lesson" class="contact-card" target="_blank" rel="noopener">
+        <span class="contact-card__icon">♟</span>
+        <div class="contact-card__title">Book a Free Trial</div>
+        <div class="contact-card__desc">For parents exploring our academy</div>
+      </a>
+      <a href="https://wa.me/85266295092?text=Hi%2C%20I'd%20like%20to%20explore%20a%20school%20partnership" class="contact-card" target="_blank" rel="noopener">
+        <span class="contact-card__icon">🏫</span>
+        <div class="contact-card__title">School Partnership</div>
+        <div class="contact-card__desc">For principals and directors</div>
+      </a>
+      <a href="https://wa.me/85266295092" class="contact-card" target="_blank" rel="noopener">
+        <span class="contact-card__icon">💬</span>
+        <div class="contact-card__title">Contact Us</div>
+        <div class="contact-card__desc">WhatsApp: +852 6629 5092</div>
+      </a>
+    </div>
+
+    <div class="contact-details fade-in">
+      <strong>Oliver Conran</strong> · Principal<br>
+      info@scholasticchess.hk · <a href="https://www.instagram.com/scholasticchesshk/" style="color:var(--orange);" target="_blank" rel="noopener">@scholasticchesshk</a>
+    </div>
+
+    <div class="slide-footer fade-in">
+      Scholastic Chess Hong Kong · Est. 2012 · Central, Hong Kong
+    </div>
+  </div>
+</section>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+// Progress bar
+const slides = document.querySelectorAll('.slide');
+const progressBar = document.getElementById('progressBar');
+
+function updateProgress() {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  progressBar.style.width = progress + '%';
+}
+window.addEventListener('scroll', updateProgress, { passive: true });
+
+// Fade-in on scroll
+const fadeEls = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+fadeEls.forEach(el => observer.observe(el));
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+  const currentSlide = [...slides].findIndex(s => {
+    const rect = s.getBoundingClientRect();
+    return rect.top >= -100 && rect.top < window.innerHeight / 2;
+  });
+
+  if (e.key === 'ArrowDown' || e.key === ' ' || e.key === 'PageDown') {
+    e.preventDefault();
+    const next = Math.min(currentSlide + 1, slides.length - 1);
+    slides[next].scrollIntoView({ behavior: 'smooth' });
+  }
+  if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+    e.preventDefault();
+    const prev = Math.max(currentSlide - 1, 0);
+    slides[prev].scrollIntoView({ behavior: 'smooth' });
+  }
+});
+</script>
+
+</body>
+</html>
